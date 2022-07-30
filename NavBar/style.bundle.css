@@ -1,0 +1,429 @@
+@charset "UTF-8";
+
+/* Настройки */
+:root {
+  /* Здесь можно менять цвета */
+  /* Фон */
+  --bgcolor: #6f6f6f;
+  /* Иконки */
+  --iconcolor: #00eaff;
+  /* Заголовки */
+  --hcolor: #126400;
+  /* Подпункты */
+  --subcolor: #10c500;
+  /* Точки */
+  --dotcolor: #c50000;
+  /* Цвет при наведении на иконки */
+  --hovericoncolor: #fefefe;
+  /* Цвет при наведении на подпункты */
+  --hoversubcolor: #6f00ff;
+  /* Стрелочка */
+  --arrow-url: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2310C500'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  /* Стрелочка при наведении*/
+  --hover-arrow-url: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%236F00FF'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+
+/* ================================================== */
+  /* Здесь можно менять размеры */
+  /* Ширина навигационная панели (далее н.п.) */
+  --navbar: 100px;
+  /* Лого */
+  --lg: 55px;
+  /* Ширина выпадающего окна */
+  --window1: 225px;
+  /* Отступ слева для выпадающего окна при наведении на иконку на н.п.
+  ! Чтобы всё нормально смотрелось, отступ должен равняться ширине навигационной панели (--navbar)
+    Возможность изменять отступ независимо от ширины н.п. оставлена просто на всякий случай*/
+  --lm-w1: 100px;
+  /* Ширина выпадающего окна при наведении на подпункт*/
+  --window2: 225px;
+  /* Отступ слева для выпадающего окна при наведении на подпункт
+  ! Чтобы всё нормально смотрелось, он должен быть чуть шире(1-2px) первого выпадающего окна (--window1)
+    Возможность изменять отступ независимо от ширины первого выпадающего окна оставлена просто на всякий случай*/
+  --lm-w2: 227px;
+  /*! Размеры иконок меняются в index.html при вставке svg-шки*/
+
+/* ================================================== */
+  /* Размер шрифта */
+  --font-size: 13px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+/* Ширина выпадающего окна */
+.w-win1 {
+  width: var(--window1) !important;
+}
+
+/* Размер лого */
+.h-lg {
+  height: var(--lg) !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.me-0 {
+  margin-right: 0 !important;
+}
+
+.mb-7 {
+  margin-bottom: 1.75rem !important;
+}
+
+.px-1 {
+  padding-right: 0.25rem !important;
+  padding-left: 0.25rem !important;
+}
+
+.py-1 {
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+.py-2 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.py-4 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.pt-5 {
+  padding-top: 1.25rem !important;
+}
+
+.pt-10 {
+  padding-top: 2.5rem !important;
+}
+
+.ps-1 {
+  padding-left: 0.25rem !important;
+}
+
+.fs-5 {
+  font-size: 1.15rem !important;
+}
+
+.fw-bold {
+  font-weight: 500 !important;
+}
+
+.fw-bolder {
+  font-weight: 600 !important;
+}
+
+.bgcolor {
+  background-color: var(--bgcolor) !important;
+}
+
+.d-lg-flex {
+  display: flex !important;
+}
+
+/* Ширина второго выпадающего окна */
+.w-win2 {
+  width: var(--window2) !important;
+}
+
+.align-items-lg-center {
+  align-items: center !important;
+}
+
+.px-lg-1 {
+  padding-right: 0.25rem !important;
+  padding-left: 0.25rem !important;
+}
+
+.py-lg-4 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.pt-lg-0 {
+  padding-top: 0 !important;
+}
+
+.flex-root {
+  flex: 1;
+}
+
+.flex-column-auto {
+  flex: none;
+}
+
+.flex-column-fluid {
+  flex: 1 0 auto;
+}
+
+.flex-row-auto {
+  flex: 0 0 auto;
+}
+
+.menu-sub {
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-direction: column;
+}
+
+.menu-item {
+  display: block;
+  padding: 0;
+  position: relative;
+}
+
+.menu-item .menu-link {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  flex: 0 0 100%;
+  padding: 0.65rem 1rem;
+  transition: none;
+  outline: none !important;
+}
+
+.menu-item .menu-link .menu-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.menu-item .menu-link .menu-icon .svg-icon {
+  line-height: 1;
+}
+
+.menu-item .menu-link .menu-bullet {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.menu-item .menu-link .menu-title {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.menu-item .menu-link .menu-arrow {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.menu-item .menu-content {
+  padding: 0.65rem 1rem;
+  color: var(--hcolor);
+}
+
+.menu-center {
+  justify-content: center;
+}
+
+.menu-sub-dropdown {
+  display: none;
+  border-radius: 0.475rem;
+  background-color: var(--bgcolor);
+  box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
+  z-index: 105;
+  opacity: 0;
+  z-index: 100;
+  position: absolute;
+  left:  var(--lm-w1);
+}
+
+.menu-sub-accordion {
+  opacity: 0;
+  display: none;
+  z-index: 100;
+  position: absolute;
+  left: var(--lm-w2);
+}
+
+.menu-column {
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .menu-sub-lg-dropdown {
+    display: none;
+    border-radius: 0.475rem;
+    background-color: var(--bgcolor);
+    box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
+    z-index: 105;
+  }
+}
+
+.menu-item .menu-link .menu-icon {
+  color: var(--iconcolor);
+}
+
+.menu-item .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
+  transition: fill 0.3s ease;
+  fill: var(--iconcolor);
+}
+
+.menu-item .menu-link .menu-title {
+  color: var(--subcolor);
+}
+
+.bullet {
+  display: inline-block;
+  border-radius: 6px;
+  width: 8px;
+  height: 4px;
+  flex-shrink: 0;
+}
+
+.bullet-dot {
+  background-color: var(--dotcolor);
+  width: 4px;
+  height: 4px;
+  border-radius: 100% !important;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: var(--font-size) !important;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside {
+  display: flex;
+}
+
+@media (min-width: 992px) {
+  /* Ширина полосы */
+  .aside .aside-primary {
+    width: var(--navbar);
+  }
+}
+
+.menu-arrow {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.menu-arrow:after {
+  display: block;
+  width: 100%;
+  content: " ";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-image: var(--arrow-url)
+}
+
+
+/* ======================================================= */
+/* HOVERs */
+.menu-link:hover:not(.disabled):not(.active) .menu-title {
+  color: var(--hoversubcolor);
+}
+
+.menu-link:hover:not(.disabled):not(.active) .bullet {
+  background-color: var(--hoversubcolor);
+}
+
+.menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
+  transition: fill 0.3s ease;
+  fill: var(--hovericoncolor);
+}
+
+.menu-item .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+  transition: fill 0.3s ease;
+}
+
+.menu-link:hover:not(.disabled):not(.active) .menu-arrow:after {
+  background-image: var(--hover-arrow-url);
+}
+
+.menu-item:hover .menu-sub-dropdown {
+  display: block;
+  animation: show 0.5s forwards;
+}
+
+.menu-sub-dropdown:hover {
+  opacity: 100;
+}
+
+.menu-sub-accordion:hover {
+  opacity: 100;
+}
+
+.menu-accordion:hover .menu-sub-accordion {
+  display: block;
+  animation: show 0.5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    top: 10px;
+  }
+
+  to {
+    opacity: 1;
+    top: -2px;
+  }
+}
